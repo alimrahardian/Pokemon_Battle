@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+</head>
+<body style="text-align:center" background="https://i.ytimg.com/vi/TyauNrbnmVo/maxresdefault.jpg">
+    <div style="width:400px; margin:0 auto;">
+        <!-- input -->
+        <form method="POST">
+            Cari Pokemon:<br>
+            <input type="text" name="cari1"><br>
+            VS<br>
+            <input type="text" name="cari2"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <br>
+    <div style="margin:auto; display:flex; justify-content: center">
+        <!-- output -->
+        <div>
+            <h1>{{ poke_stats.nama }}</h1>
+            <img src="{{ poke_stats.gambar }}" alt="Image" width="300" height="300">
+            <h3>ID {{ poke_stats.id }}</h3>
+            <h3>HP {{ poke_stats.HP }}</h3>
+            <h3>Attack {{ poke_stats.Attack }}</h3>
+            <h3>Defense {{ poke_stats.Defense }}</h3>
+            <h3>Sp. Atk {{ poke_stats.Sp_Atk }}</h3>
+            <h3>Sp. Def {{ poke_stats.Sp_Def }}</h3>
+            <h3>Speed {{ poke_stats.Speed }}</h3>
+        </div>
+        <div>
+            <h1 style="top:150px; position:relative">{{ combat_proba.a }}% {{ poke_stats.nama }} WINS !</h1>
+        </div>
+        <div>
+            <h1>{{ poke_stats2.nama }}</h1>
+            <img src="{{ poke_stats2.gambar }}" alt="Image" width="300" height="300">
+            <h3>ID {{ poke_stats2.id }}</h3>
+            <h3>HP {{ poke_stats.HP }}</h3>
+            <h3>Attack {{ poke_stats2.Attack }}</h3>
+            <h3>Defense {{ poke_stats2.Defense }}</h3>
+            <h3>Sp. Atk {{ poke_stats2.Sp_Atk }}</h3>
+            <h3>Sp. Def {{ poke_stats2.Sp_Def }}</h3>
+            <h3>Speed {{ poke_stats2.Speed }}</h3>
+        </div>
+    </div>
+    <div>
+        <form action="http://localhost:5000/">
+            <input type="submit" value="Go Back" />
+        </form>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
