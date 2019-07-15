@@ -64,7 +64,7 @@ def home():
             }
 
             
-            combat_proba = {'a' : randomFr.predict_proba([[poke_stats['id'], poke_stats2['id']]])[0][1]}
+            combat_proba = {'a' : randomFr.predict_proba([[poke_stats['id'], poke_stats2['id']]])[0][1] * 100}
 
             return render_template (
                 'result.html', 
