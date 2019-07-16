@@ -41,12 +41,12 @@ def home():
                 'nama' : req_pokemon['name'],
                 'gambar' : req_pokemon['sprites']['front_default'],
                 'id' : req_pokemon['id'],
-                'HP' : pokemon['HP'].iloc[req_pokemon['id']],
-                'Attack' : pokemon['Attack'].iloc[req_pokemon['id']],
-                'Defense' : pokemon['Defense'].iloc[req_pokemon['id']],
-                'Sp_Atk' : pokemon['Sp. Atk'].iloc[req_pokemon['id']],
-                'Sp_Def' : pokemon['Sp. Def'].iloc[req_pokemon['id']],
-                'Speed' : pokemon['Speed'].iloc[req_pokemon['id']]
+                'HP' : req_pokemon['stats'][5]['base_stat'],
+                'Attack' : req_pokemon['stats'][4]['base_stat'],
+                'Defense' : req_pokemon['stats'][3]['base_stat'],
+                'Sp_Atk' : req_pokemon['stats'][2]['base_stat'],
+                'Sp_Def' : req_pokemon['stats'][1]['base_stat'],
+                'Speed' : req_pokemon['stats'][0]['base_stat']
             }
 
             cari2 = request.form['cari2']
@@ -55,12 +55,12 @@ def home():
                 'nama' : req_pokemon2['name'],
                 'gambar' : req_pokemon2['sprites']['front_default'],
                 'id' : req_pokemon2['id'],
-                'HP' : pokemon['HP'].iloc[req_pokemon2['id']],
-                'Attack' : pokemon['Attack'].iloc[req_pokemon2['id']],
-                'Defense' : pokemon['Defense'].iloc[req_pokemon2['id']],
-                'Sp_Atk' : pokemon['Sp. Atk'].iloc[req_pokemon2['id']],
-                'Sp_Def' : pokemon['Sp. Def'].iloc[req_pokemon2['id']],
-                'Speed' : pokemon['Speed'].iloc[req_pokemon2['id']]
+                'HP' : req_pokemon2['stats'][5]['base_stat'],
+                'Attack' : req_pokemon2['stats'][4]['base_stat'],
+                'Defense' : req_pokemon2['stats'][3]['base_stat'],
+                'Sp_Atk' : req_pokemon2['stats'][2]['base_stat'],
+                'Sp_Def' : req_pokemon2['stats'][1]['base_stat'],
+                'Speed' : req_pokemon2['stats'][0]['base_stat']
             }
 
             
